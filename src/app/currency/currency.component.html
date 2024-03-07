@@ -1,3 +1,5 @@
 <h1>My store</h1>
 <app-currency-switcher> </app-currency-switcher>
-The selected currency is: ???
+The selected currency is: 
+{{ currencyService.currentCurrency().symbol }}  
+{{ priceInUsd / currencyService.exchangeRate() | number: '0.0-2'}}
